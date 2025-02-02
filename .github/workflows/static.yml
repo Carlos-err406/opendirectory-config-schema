@@ -43,14 +43,14 @@ jobs:
       - name: Install json-schema-for-humans
         run: pip install json-schema-for-humans
 
-      - name: Generate documentation
-        run: generate-schema-doc . docs/pages --config-file=docs/config.json
-
       - name: Copy config schemas
         run: cp -r ./*.schema.json docs/pages
 
-      - name: Create index html
-        run: cp docs/pages/index.schema.html docs/pages/index.html
+      # - name: Generate documentation
+      #   run: generate-schema-doc ./ docs/pages --config-file=docs/config.json
+
+      # - name: Create index html
+      #   run: cp docs/pages/index.schema.html docs/pages/index.html
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
