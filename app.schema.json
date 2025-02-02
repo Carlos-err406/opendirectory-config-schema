@@ -13,9 +13,6 @@
 		"ousPage": {
 			"$ref": "page-ous.schema.json"
 		},
-		"settingsPage": {
-			"$ref": "page-settings.schema.json"
-		},
 		"treePage": {
 			"$ref": "page-tree.schema.json"
 		},
