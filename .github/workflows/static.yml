@@ -37,22 +37,22 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Create folders
-        run: mkdir -p ./docs/pages/schemas
+      - name: Create web folder
+        run: mkdir -p ./web
 
       - name: Install json-schema-for-humans
         run: pip install json-schema-for-humans
 
-      - name: Copy config schemas
-        run: cp -r ./*.schema.json ./docs/pages
+      - name: Generate schema documentation
+        run: generate-schema-doc --config-file docs/config.yaml index.schema.json web/index.html
 
-      - name: Generate documentation
-        run: generate-schema-doc --config-file docs/config.yaml index.schema.json docs/pages/index.html
+      - name: Copy schemas to make them accessible
+        run: cp -r ./*.schema.json ./web
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./docs/pages
+          path: ./web
 
       - name: Deploy to GitHub Pages
         id: deployment
