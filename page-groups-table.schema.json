@@ -122,7 +122,7 @@
 							"default": true
 						},
 						"hidden": {
-							"description": "Wether or not the \"whenCreated\" column is hidden by default. @default true",
+							"description": "Wether or not the \"whenCreated\" column is hidden by default. @default false",
 							"type": "boolean",
 							"default": true
 						},
