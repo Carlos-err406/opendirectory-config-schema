@@ -44,10 +44,10 @@ jobs:
         run: pip install json-schema-for-humans
 
       - name: Generate documentation
-        run: generate-schema-doc src/config/schemas docs/pages --config-file=docs/config.json
+        run: generate-schema-doc . docs/pages --config-file=docs/config.json
 
       - name: Copy config schemas
-        run: cp -r src/config/schemas docs/pages
+        run: cp -r ./*.schema.json docs/pages
 
       - name: Create index html
         run: cp docs/pages/index.schema.html docs/pages/index.html
