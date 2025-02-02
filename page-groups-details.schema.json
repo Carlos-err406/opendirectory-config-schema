@@ -8,7 +8,6 @@
 			"description": "Configuration regarding the \"cn\" attribute of the group",
 			"type": "object",
 			"properties": {
-			
 				"show": {
 					"description": "Wether or not to show the \"cn\" attribute in the \"/groups/[dn]\" page. @default true",
 					"type": "boolean",
@@ -21,7 +20,6 @@
 			"description": "Configuration regarding the \"description\" attribute of the group",
 			"type": "object",
 			"properties": {
-			
 				"show": {
 					"description": "Wether or not to show the \"description\" attribute in the \"/groups/[dn]\" page. @default true",
 					"type": "boolean",
@@ -34,7 +32,6 @@
 			"description": "Configuration regarding the \"distinguishedName\" attribute of the group",
 			"type": "object",
 			"properties": {
-			
 				"show": {
 					"description": "Wether or not to show the \"distinguishedName\" attribute in the \"/groups/[dn]\" page. @default true",
 					"type": "boolean",
@@ -47,7 +44,6 @@
 			"description": "Configuration regarding the \"groupType\" attribute of the group",
 			"type": "object",
 			"properties": {
-			
 				"show": {
 					"description": "Wether or not to show the \"groupType\" attribute in the \"/groups/[dn]\" page. @default true",
 					"type": "boolean",
@@ -60,7 +56,6 @@
 			"description": "Configuration regarding the \"mail\" attribute of the group",
 			"type": "object",
 			"properties": {
-			
 				"show": {
 					"description": "Wether or not to show the \"mail\" attribute in the \"/groups/[dn]\" page. @default true",
 					"type": "boolean",
@@ -79,7 +74,6 @@
 			"description": "Configuration regarding the \"sAMAccountName\" attribute of the group",
 			"type": "object",
 			"properties": {
-			
 				"show": {
 					"description": "Wether or not to show the \"sAMAccountName\" attribute in the \"/groups/[dn]\" page. @default true",
 					"type": "boolean",
@@ -92,7 +86,6 @@
 			"description": "Configuration regarding the \"whenChanged\" attribute of the group",
 			"type": "object",
 			"properties": {
-			
 				"show": {
 					"description": "Wether or not to show the \"whenChanged\" attribute in the \"/groups/[dn]\" page. @default true",
 					"type": "boolean",
@@ -105,7 +98,6 @@
 			"description": "Configuration regarding the \"whenCreated\" attribute of the group",
 			"type": "object",
 			"properties": {
-			
 				"show": {
 					"description": "Wether or not to show the \"whenCreated\" attribute in the \"/groups/[dn]\" page. @default true",
 					"type": "boolean",

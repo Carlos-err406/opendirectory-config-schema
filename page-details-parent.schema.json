@@ -7,12 +7,12 @@
 		"asLink": {
 			"description": "Show parent as link to to the parent entry. @default false",
 			"type": "boolean",
-			"default": false
+			"default": true
 		},
 		"shortParent": {
 			"description": "If false the parent of the group will be shown as the full distinguishedName, else only the CN is shown. @default false",
 			"type": "boolean",
-			"default": false
+			"default": true
 		}
 	},
 	"additionalProperties": false

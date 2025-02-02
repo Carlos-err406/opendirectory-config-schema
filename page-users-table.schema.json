@@ -10,7 +10,6 @@
 				"description": {
 					"description": "Configure the users table description column",
 					"properties": {
-					
 						"hidable": {
 							"description": "Wether or not the \"description\" is hidable or not. @default true",
 							"type": "boolean",
@@ -32,7 +31,6 @@
 				"displayName": {
 					"description": "Configure the users table displayName column",
 					"properties": {
-					
 						"hidable": {
 							"description": "Wether or not the \"displayName\" is hidable or not. @default true",
 							"type": "boolean",
@@ -54,7 +52,6 @@
 				"dn": {
 					"description": "Configure the users table dn column",
 					"properties": {
-					
 						"hidable": {
 							"description": "Wether or not the \"dn\" is hidable or not. @default true",
 							"type": "boolean",
@@ -76,7 +73,6 @@
 				"givenName": {
 					"description": "Configure the users table givenName column",
 					"properties": {
-					
 						"hidable": {
 							"description": "Wether or not the \"givenName\" is hidable or not. @default true",
 							"type": "boolean",
@@ -98,7 +94,6 @@
 				"jpegPhoto": {
 					"description": "Configure the users table jpegPhoto column",
 					"properties": {
-					
 						"hidable": {
 							"description": "Wether or not the \"jpegPhoto\" is hidable or not. @default true",
 							"type": "boolean",
@@ -120,7 +115,6 @@
 				"mail": {
 					"description": "Configure the users table mail column",
 					"properties": {
-					
 						"hidable": {
 							"description": "Wether or not the \"mail\" is hidable or not. @default true",
 							"type": "boolean",
@@ -142,7 +136,6 @@
 				"sAMAccountName": {
 					"description": "Configure the users table \"sAMAccountName\" column",
 					"properties": {
-					
 						"hidable": {
 							"description": "Wether or not the \"sAMAccountName\" is hidable or not. @default false",
 							"type": "boolean",
@@ -164,7 +157,6 @@
 				"sn": {
 					"description": "Configure the users table sn column",
 					"properties": {
-					
 						"hidable": {
 							"description": "Wether or not the \"sn\" is hidable or not. @default true",
 							"type": "boolean",
@@ -186,7 +178,6 @@
 				"userAccountControl": {
 					"description": "Configure the users table userAccountControl column",
 					"properties": {
-					
 						"hidable": {
 							"description": "Wether or not the \"userAccountControl\" is hidable or not. @default true",
 							"type": "boolean",
@@ -208,7 +199,6 @@
 				"whenCreated": {
 					"description": "Configure the users table whenCreated column",
 					"properties": {
-					
 						"hidable": {
 							"description": "Wether or not the \"whenCreated\" is hidable or not. @default true",
 							"type": "boolean",

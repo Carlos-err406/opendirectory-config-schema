@@ -7,12 +7,12 @@
 		"asLinks": {
 			"description": "Show members as links to each member detailed page. @default false",
 			"type": "boolean",
-			"default": false
+			"default": true
 		},
 		"shortMember": {
 			"description": "If false the each member will be shown as the full distinguishedName, else only the name will be shown. @default false",
 			"type": "boolean",
-			"default": false
+			"default": true
 		}
 	},
 
