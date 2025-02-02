@@ -47,10 +47,7 @@ jobs:
         run: cp -r ./*.schema.json ./docs/pages
 
       - name: Generate documentation
-        run: generate-schema-doc --config-file docs/config.yaml index.schema.json docs/pages
-
-      - name: Create index html
-        run: cp ./docs/pages/index.schema.html ./docs/pages/index.html
+        run: generate-schema-doc --config-file docs/config.yaml index.schema.json docs/pages/index.html
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
