@@ -47,7 +47,7 @@ jobs:
         run: cp -r ./*.schema.json ./pages
 
       - name: Generate documentation
-        run: generate-schema-doc ./ ./pages --config-file=docs/config.json
+        run: generate-schema-doc ./ ./pages --config-file=docs/config.yaml
 
       - name: Create index html
         run: cp ./pages/index.schema.html ./pages/index.html
