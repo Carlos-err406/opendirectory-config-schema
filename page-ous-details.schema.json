@@ -8,11 +8,7 @@
 			"description": "Configuration regarding the \"name\" attribute of the OU",
 			"type": "object",
 			"properties": {
-				"label": {
-					"default": "name",
-					"description": "@default \"name\"",
-					"type": "string"
-				},
+			
 				"show": {
 					"description": "Wether or not to show the \"name\" attribute in the \"/ous/[dn]\" page. @default true",
 					"type": "boolean",
@@ -25,11 +21,7 @@
 			"description": "Configuration regarding the \"description\" attribute of the OU",
 			"type": "object",
 			"properties": {
-				"label": {
-					"default": "description",
-					"description": "@default \"description\"",
-					"type": "string"
-				},
+			
 				"show": {
 					"description": "Wether or not to show the \"description\" attribute in the \"/ous/[dn]\" page. @default true",
 					"type": "boolean",
@@ -48,11 +40,7 @@
 			"description": "Configuration regarding the \"distinguishedName\" attribute of the ou",
 			"type": "object",
 			"properties": {
-				"label": {
-					"default": "distinguishedName",
-					"description": "@default \"distinguishedName\"",
-					"type": "string"
-				},
+			
 				"show": {
 					"description": "Wether or not to show the \"distinguishedName\" attribute in the \"/ous/[dn]\" page. @default true",
 					"type": "boolean",
@@ -65,11 +53,7 @@
 			"description": "Configuration regarding the \"whenChanged\" attribute of the ou",
 			"type": "object",
 			"properties": {
-				"label": {
-					"default": "whenChanged",
-					"description": "@default \"whenChanged\"",
-					"type": "string"
-				},
+			
 				"show": {
 					"description": "Wether or not to show the \"whenChanged\" attribute in the \"/ous/[dn]\" page. @default true",
 					"type": "boolean",
@@ -82,11 +66,7 @@
 			"description": "Configuration regarding the \"whenCreated\" attribute of the ou",
 			"type": "object",
 			"properties": {
-				"label": {
-					"default": "whenCreated",
-					"description": "@default \"whenCreated\"",
-					"type": "string"
-				},
+			
 				"show": {
 					"description": "Wether or not to show the \"whenCreated\" attribute in the \"/ous/[dn]\" page. @default true",
 					"type": "boolean",

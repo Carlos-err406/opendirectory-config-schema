@@ -1,8 +1,9 @@
 {
-	"$id": "app-nonAdmin.schema.json",
+	"$id": "system-nonAdmin.schema.json",
 	"additionalProperties": false,
 	"type": "object",
 	"description": "Settings regarding non-admin users",
+	"title": "NonAdminConfig",
 	"properties": {
 		"allowSelfEdit": {
 			"type": "boolean",

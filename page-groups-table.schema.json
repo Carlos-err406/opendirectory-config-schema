@@ -11,15 +11,15 @@
 				"description": {
 					"description": "Configure groups table \"description\" column.",
 					"properties": {
-						"header": {
-							"default": "description",
-							"description": "Header for the \"description\" column of the groups table. @default \"description\"",
-							"type": "string"
-						},
 						"hidable": {
 							"description": "Wether or not allow the \"description\" column to be hidable. @default true",
 							"type": "boolean",
 							"default": true
+						},
+						"hidden": {
+							"description": "Wether or not the \"description\" column is hidden by default. @default false",
+							"type": "boolean",
+							"default": false
 						},
 						"show": {
 							"description": "Wether or not to show the \"description\" group table column. @default true",
@@ -32,15 +32,15 @@
 				"dn": {
 					"description": "Configure groups table \"dn\" column.",
 					"properties": {
-						"header": {
-							"default": "distinguishedName",
-							"description": "Header for the \"dn\" column of the groups table. @default \"dn\"",
-							"type": "string"
-						},
 						"hidable": {
 							"description": "Wether or not allow the \"dn\" column to be hidable. @default true",
 							"type": "boolean",
 							"default": true
+						},
+						"hidden": {
+							"description": "Wether or not the \"dn\" column is hidden by default. @default false",
+							"type": "boolean",
+							"default": false
 						},
 						"show": {
 							"description": "Wether or not to show the \"dn\" group table column. @default true",
@@ -53,15 +53,15 @@
 				"groupType": {
 					"description": "Configure groups table \"groupType\" column.",
 					"properties": {
-						"header": {
-							"default": "userAccountControl",
-							"description": "Header for the \"groupType\" column of the groups table. @default \"groupType\"",
-							"type": "string"
-						},
 						"hidable": {
 							"description": "Wether or not allow the \"groupType\" column to be hidable. @default true",
 							"type": "boolean",
 							"default": true
+						},
+						"hidden": {
+							"description": "Wether or not the \"groupType\" column is hidden by default. @default false",
+							"type": "boolean",
+							"default": false
 						},
 						"show": {
 							"description": "Wether or not to show the \"groupType\" group table column. @default true",
@@ -74,15 +74,15 @@
 				"mail": {
 					"description": "Configure groups table \"mail\" column.",
 					"properties": {
-						"header": {
-							"default": "mail",
-							"description": "Header for the \"mail\" column of the groups table. @default \"mail\"",
-							"type": "string"
-						},
 						"hidable": {
 							"description": "Wether or not allow the \"mail\" column to be hidable. @default true",
 							"type": "boolean",
 							"default": true
+						},
+						"hidden": {
+							"description": "Wether or not the \"mail\" column is hidden by default. @default false",
+							"type": "boolean",
+							"default": false
 						},
 						"show": {
 							"description": "Wether or not to show the \"mail\" group table column. @default true",
@@ -95,13 +95,13 @@
 				"sAMAccountName": {
 					"description": "Configure groups table \"sAMAccountName\" column.",
 					"properties": {
-						"header": {
-							"default": "sAMAccountName",
-							"description": "Header for the \"sAMAccountName\" column of the groups table. @default \"sAMAccountName\"",
-							"type": "string"
-						},
 						"hidable": {
 							"description": "Wether or not allow the \"sAMAccountName\" column to be hidable. @default false",
+							"type": "boolean",
+							"default": false
+						},
+						"hidden": {
+							"description": "Wether or not the \"sAMAccountName\" column is hidden by default. @default false",
 							"type": "boolean",
 							"default": false
 						},
@@ -116,13 +116,13 @@
 				"whenCreated": {
 					"description": "Configure groups table \"whenCreated\" column.",
 					"properties": {
-						"header": {
-							"default": "whenCreated",
-							"description": "Header for the \"whenCreated\" column of the groups table. @default \"whenCreated\"",
-							"type": "string"
-						},
 						"hidable": {
 							"description": "Wether or not allow the \"whenCreated\" column to be hidable. @default true",
+							"type": "boolean",
+							"default": true
+						},
+						"hidden": {
+							"description": "Wether or not the \"whenCreated\" column is hidden by default. @default true",
 							"type": "boolean",
 							"default": true
 						},

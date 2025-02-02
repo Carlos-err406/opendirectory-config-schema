@@ -10,13 +10,14 @@
 				"description": {
 					"description": "Configure the users table description column",
 					"properties": {
-						"header": {
-							"default": "description",
-							"description": "Name of the table header for the description column. @default \"description\"",
-							"type": "string"
-						},
+					
 						"hidable": {
 							"description": "Wether or not the \"description\" is hidable or not. @default true",
+							"type": "boolean",
+							"default": true
+						},
+						"hidden": {
+							"description": "Wether or not the \"description\" is hidden by default. @default true",
 							"type": "boolean",
 							"default": true
 						},
@@ -31,15 +32,16 @@
 				"displayName": {
 					"description": "Configure the users table displayName column",
 					"properties": {
-						"header": {
-							"default": "displayName",
-							"description": "Name of the table header for the displayName column. @default \"displayName\"",
-							"type": "string"
-						},
+					
 						"hidable": {
 							"description": "Wether or not the \"displayName\" is hidable or not. @default true",
 							"type": "boolean",
 							"default": true
+						},
+						"hidden": {
+							"description": "Wether or not the \"displayName\" is hidden by default. @default false",
+							"type": "boolean",
+							"default": false
 						},
 						"show": {
 							"description": "Wether or not to show the displayName column. If false \"hidable\" is ignored. @default true",
@@ -52,13 +54,14 @@
 				"dn": {
 					"description": "Configure the users table dn column",
 					"properties": {
-						"header": {
-							"default": "distinguishedName",
-							"description": "Name of the table header for the dn column. @default \"dn\"",
-							"type": "string"
-						},
+					
 						"hidable": {
 							"description": "Wether or not the \"dn\" is hidable or not. @default true",
+							"type": "boolean",
+							"default": true
+						},
+						"hidden": {
+							"description": "Wether or not the \"dn\" is hidden by default. @default true",
 							"type": "boolean",
 							"default": true
 						},
@@ -73,13 +76,14 @@
 				"givenName": {
 					"description": "Configure the users table givenName column",
 					"properties": {
-						"header": {
-							"default": "givenName",
-							"description": "Name of the table header for the givenName column. @default \"givenName\"",
-							"type": "string"
-						},
+					
 						"hidable": {
 							"description": "Wether or not the \"givenName\" is hidable or not. @default true",
+							"type": "boolean",
+							"default": true
+						},
+						"hidden": {
+							"description": "Wether or not the \"givenName\" is hidden by default. @default true",
 							"type": "boolean",
 							"default": true
 						},
@@ -94,15 +98,16 @@
 				"jpegPhoto": {
 					"description": "Configure the users table jpegPhoto column",
 					"properties": {
-						"header": {
-							"default": "jpegPhoto",
-							"description": "Name of the table header for the jpegPhoto column. @default \"jpegPhoto\"",
-							"type": "string"
-						},
+					
 						"hidable": {
 							"description": "Wether or not the \"jpegPhoto\" is hidable or not. @default true",
 							"type": "boolean",
 							"default": true
+						},
+						"hidden": {
+							"description": "Wether or not the \"jpegPhoto\" is hidden by default. @default false",
+							"type": "boolean",
+							"default": false
 						},
 						"show": {
 							"description": "Wether or not to show the jpegPhoto column. If false \"hidable\" is ignored. @default true",
@@ -115,15 +120,16 @@
 				"mail": {
 					"description": "Configure the users table mail column",
 					"properties": {
-						"header": {
-							"default": "mail",
-							"description": "Name of the table header for the mail column. @default \"mail\"",
-							"type": "string"
-						},
+					
 						"hidable": {
 							"description": "Wether or not the \"mail\" is hidable or not. @default true",
 							"type": "boolean",
 							"default": true
+						},
+						"hidden": {
+							"description": "Wether or not the \"mail\" is hidden by default. @default false",
+							"type": "boolean",
+							"default": false
 						},
 						"show": {
 							"description": "Wether or not to show the mail column. If false \"hidable\" is ignored. @default true",
@@ -136,13 +142,14 @@
 				"sAMAccountName": {
 					"description": "Configure the users table \"sAMAccountName\" column",
 					"properties": {
-						"header": {
-							"default": "sAMAccountName",
-							"description": "Name of the table header for the \"sAMAccountName\" column. @default \"sAMAccountName\"",
-							"type": "string"
-						},
+					
 						"hidable": {
 							"description": "Wether or not the \"sAMAccountName\" is hidable or not. @default false",
+							"type": "boolean",
+							"default": false
+						},
+						"hidden": {
+							"description": "Wether or not the \"sAMAccountName\" is hidden by default. @default false",
 							"type": "boolean",
 							"default": false
 						},
@@ -157,13 +164,14 @@
 				"sn": {
 					"description": "Configure the users table sn column",
 					"properties": {
-						"header": {
-							"default": "sn",
-							"description": "Name of the table header for the sn column. @default \"sn\"",
-							"type": "string"
-						},
+					
 						"hidable": {
 							"description": "Wether or not the \"sn\" is hidable or not. @default true",
+							"type": "boolean",
+							"default": true
+						},
+						"hidden": {
+							"description": "Wether or not the \"sn\" is hidden by default. @default true",
 							"type": "boolean",
 							"default": true
 						},
@@ -178,15 +186,16 @@
 				"userAccountControl": {
 					"description": "Configure the users table userAccountControl column",
 					"properties": {
-						"header": {
-							"default": "userAccountControl",
-							"description": "Name of the table header for the userAccountControl column. @default \"userAccountControl\"",
-							"type": "string"
-						},
+					
 						"hidable": {
 							"description": "Wether or not the \"userAccountControl\" is hidable or not. @default true",
 							"type": "boolean",
 							"default": true
+						},
+						"hidden": {
+							"description": "Wether or not the \"userAccountControl\" is hidden by default. @default false",
+							"type": "boolean",
+							"default": false
 						},
 						"show": {
 							"description": "Wether or not to show the userAccountControl column. If false \"hidable\" is ignored. @default true",
@@ -199,13 +208,14 @@
 				"whenCreated": {
 					"description": "Configure the users table whenCreated column",
 					"properties": {
-						"header": {
-							"default": "whenCreated",
-							"description": "Name of the table header for the whenCreated column. @default \"whenCreated\"",
-							"type": "string"
-						},
+					
 						"hidable": {
 							"description": "Wether or not the \"whenCreated\" is hidable or not. @default true",
+							"type": "boolean",
+							"default": true
+						},
+						"hidden": {
+							"description": "Wether or not the \"whenCreated\" is hidden by default. @default true",
 							"type": "boolean",
 							"default": true
 						},

@@ -8,11 +8,7 @@
 			"description": "Configuration regarding the \"cn\" attribute of the group",
 			"type": "object",
 			"properties": {
-				"label": {
-					"default": "cn",
-					"description": "@default \"cn\"",
-					"type": "string"
-				},
+			
 				"show": {
 					"description": "Wether or not to show the \"cn\" attribute in the \"/groups/[dn]\" page. @default true",
 					"type": "boolean",
@@ -25,11 +21,7 @@
 			"description": "Configuration regarding the \"description\" attribute of the group",
 			"type": "object",
 			"properties": {
-				"label": {
-					"default": "description",
-					"description": "@default \"description\"",
-					"type": "string"
-				},
+			
 				"show": {
 					"description": "Wether or not to show the \"description\" attribute in the \"/groups/[dn]\" page. @default true",
 					"type": "boolean",
@@ -42,11 +34,7 @@
 			"description": "Configuration regarding the \"distinguishedName\" attribute of the group",
 			"type": "object",
 			"properties": {
-				"label": {
-					"default": "distinguishedName",
-					"description": "@default \"distinguishedName\"",
-					"type": "string"
-				},
+			
 				"show": {
 					"description": "Wether or not to show the \"distinguishedName\" attribute in the \"/groups/[dn]\" page. @default true",
 					"type": "boolean",
@@ -59,11 +47,7 @@
 			"description": "Configuration regarding the \"groupType\" attribute of the group",
 			"type": "object",
 			"properties": {
-				"label": {
-					"default": "groupType",
-					"description": "@default \"groupType\"",
-					"type": "string"
-				},
+			
 				"show": {
 					"description": "Wether or not to show the \"groupType\" attribute in the \"/groups/[dn]\" page. @default true",
 					"type": "boolean",
@@ -76,11 +60,7 @@
 			"description": "Configuration regarding the \"mail\" attribute of the group",
 			"type": "object",
 			"properties": {
-				"label": {
-					"default": "mail",
-					"description": "@default \"mail\"",
-					"type": "string"
-				},
+			
 				"show": {
 					"description": "Wether or not to show the \"mail\" attribute in the \"/groups/[dn]\" page. @default true",
 					"type": "boolean",
@@ -99,11 +79,7 @@
 			"description": "Configuration regarding the \"sAMAccountName\" attribute of the group",
 			"type": "object",
 			"properties": {
-				"label": {
-					"default": "sAMAccountName",
-					"description": "@default \"sAMAccountName\"",
-					"type": "string"
-				},
+			
 				"show": {
 					"description": "Wether or not to show the \"sAMAccountName\" attribute in the \"/groups/[dn]\" page. @default true",
 					"type": "boolean",
@@ -116,11 +92,7 @@
 			"description": "Configuration regarding the \"whenChanged\" attribute of the group",
 			"type": "object",
 			"properties": {
-				"label": {
-					"default": "whenChanged",
-					"description": "@default \"whenChanged\"",
-					"type": "string"
-				},
+			
 				"show": {
 					"description": "Wether or not to show the \"whenChanged\" attribute in the \"/groups/[dn]\" page. @default true",
 					"type": "boolean",
@@ -133,11 +105,7 @@
 			"description": "Configuration regarding the \"whenCreated\" attribute of the group",
 			"type": "object",
 			"properties": {
-				"label": {
-					"default": "whenCreated",
-					"description": "@default \"whenCreated\"",
-					"type": "string"
-				},
+			
 				"show": {
 					"description": "Wether or not to show the \"whenCreated\" attribute in the \"/groups/[dn]\" page. @default true",
 					"type": "boolean",
