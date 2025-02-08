@@ -1,0 +1,15 @@
+{
+	"$id": "page-groups-details.schema.json",
+	"description": "Configuration regarding the detailed view of a group (\"/groups/[dn]\")",
+	"title": "GroupDetailsConfig",
+	"type": "object",
+	"properties": {
+		"parent": {
+			"$ref": "page-details-parent.schema.json"
+		},
+		"member": {
+			"$ref": "page-details-member.schema.json"
+		}
+	},
+	"additionalProperties": false
+}

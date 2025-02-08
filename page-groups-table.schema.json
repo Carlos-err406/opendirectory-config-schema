@@ -1,0 +1,142 @@
+{
+	"$id": "page-groups-table.schema.json",
+	"description": "Groups table view configuration",
+	"title": "GroupsTableConfig",
+	"type": "object",
+	"properties": {
+		"columns": {
+			"description": "Groups table column settings",
+			"type": "object",
+			"properties": {
+				"description": {
+					"description": "Configure groups table \"description\" column.",
+					"properties": {
+						"hidable": {
+							"description": "Wether or not allow the \"description\" column to be hidable. @default true",
+							"type": "boolean",
+							"default": true
+						},
+						"hidden": {
+							"description": "Wether or not the \"description\" column is hidden by default. @default false",
+							"type": "boolean",
+							"default": false
+						},
+						"show": {
+							"description": "Wether or not to show the \"description\" group table column. @default true",
+							"type": "boolean",
+							"default": true
+						}
+					},
+					"additionalProperties": false
+				},
+				"dn": {
+					"description": "Configure groups table \"dn\" column.",
+					"properties": {
+						"hidable": {
+							"description": "Wether or not allow the \"dn\" column to be hidable. @default true",
+							"type": "boolean",
+							"default": true
+						},
+						"hidden": {
+							"description": "Wether or not the \"dn\" column is hidden by default. @default false",
+							"type": "boolean",
+							"default": false
+						},
+						"show": {
+							"description": "Wether or not to show the \"dn\" group table column. @default true",
+							"type": "boolean",
+							"default": true
+						}
+					},
+					"additionalProperties": false
+				},
+				"groupType": {
+					"description": "Configure groups table \"groupType\" column.",
+					"properties": {
+						"hidable": {
+							"description": "Wether or not allow the \"groupType\" column to be hidable. @default true",
+							"type": "boolean",
+							"default": true
+						},
+						"hidden": {
+							"description": "Wether or not the \"groupType\" column is hidden by default. @default false",
+							"type": "boolean",
+							"default": false
+						},
+						"show": {
+							"description": "Wether or not to show the \"groupType\" group table column. @default true",
+							"type": "boolean",
+							"default": true
+						}
+					},
+					"additionalProperties": false
+				},
+				"mail": {
+					"description": "Configure groups table \"mail\" column.",
+					"properties": {
+						"hidable": {
+							"description": "Wether or not allow the \"mail\" column to be hidable. @default true",
+							"type": "boolean",
+							"default": true
+						},
+						"hidden": {
+							"description": "Wether or not the \"mail\" column is hidden by default. @default false",
+							"type": "boolean",
+							"default": false
+						},
+						"show": {
+							"description": "Wether or not to show the \"mail\" group table column. @default true",
+							"type": "boolean",
+							"default": true
+						}
+					},
+					"additionalProperties": false
+				},
+				"sAMAccountName": {
+					"description": "Configure groups table \"sAMAccountName\" column.",
+					"properties": {
+						"hidable": {
+							"description": "Wether or not allow the \"sAMAccountName\" column to be hidable. @default false",
+							"type": "boolean",
+							"default": false
+						},
+						"hidden": {
+							"description": "Wether or not the \"sAMAccountName\" column is hidden by default. @default false",
+							"type": "boolean",
+							"default": false
+						},
+						"show": {
+							"description": "Wether or not to show the \"sAMAccountName\" group table column. @default true",
+							"type": "boolean",
+							"default": true
+						}
+					},
+					"additionalProperties": false
+				},
+				"whenCreated": {
+					"description": "Configure groups table \"whenCreated\" column.",
+					"properties": {
+						"hidable": {
+							"description": "Wether or not allow the \"whenCreated\" column to be hidable. @default true",
+							"type": "boolean",
+							"default": true
+						},
+						"hidden": {
+							"description": "Wether or not the \"whenCreated\" column is hidden by default. @default false",
+							"type": "boolean",
+							"default": true
+						},
+						"show": {
+							"description": "Wether or not to show the \"whenCreated\" group table column. @default true",
+							"type": "boolean",
+							"default": true
+						}
+					},
+					"additionalProperties": false
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"additionalProperties": false
+}

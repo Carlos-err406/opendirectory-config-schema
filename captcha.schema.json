@@ -1,0 +1,58 @@
+{
+	"$id": "captcha.schema.json",
+	"description": "Captcha personalization options. Uses @link https://www.npmjs.com/package/svg-captcha ",
+	"title": "CaptchaConfig",
+	"type": "object",
+	"properties": {
+		"size": {
+			"default": 5,
+			"minimum": 1,
+			"description": "Length of the captcha shown in the authentication page, recommended to use a low value for development. @default 5",
+			"type": "integer"
+		},
+		"height": {
+			"default": 96,
+			"description": "Height of the captcha image. @default 96",
+			"type": "integer"
+		},
+		"width": {
+			"default": 345,
+			"description": "Width of the captcha image. @default 345",
+			"type": "integer"
+		},
+		"fontSize": {
+			"default": 90,
+			"minimum": 0,
+			"description": "Font size of the characters in the captcha. @default 30",
+			"type": "integer"
+		},
+		"charPreset": {
+			"default": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+			"description": "Characters used to generate the random string in the captcha. @default \"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz\"",
+			"type": "string"
+		},
+		"color": {
+			"type": "boolean",
+			"description": "If false, captcha will be black and white otherwise, it will be randomly colorized @default false",
+			"default": false
+		},
+		"ignoreChars": {
+			"default": "",
+			"type": "string",
+			"description": "Characters that will be ignored in the captcha. @default \"\""
+		},
+		"noise": {
+			"type": "integer",
+			"minimum": 0,
+			"description": "Number of noise lines in the captcha. @default 5",
+			"default": 5
+		},
+		"background": {
+			"default": "white",
+			"description": "CSS color of the captcha background. Can use other css variants other than hex. @default \"#FFFFFF\"",
+			"type": "string",
+			"examples": ["#FFFFFF", "rgb(255,255,255)", "hsl(0, 0%, 100%)", "white"]
+		}
+	},
+	"additionalProperties": false
+}

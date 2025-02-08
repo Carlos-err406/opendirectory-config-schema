@@ -1,0 +1,1009 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "Configuration settings",
+  "title": "Config",
+  "type": "object",
+  "properties": {
+    "app": {
+      "$id": "app.schema.json",
+      "description": "Application configuration settings",
+      "title": "AppConfig",
+      "type": "object",
+      "properties": {
+        "groupsPage": {
+          "$id": "page-groups.schema.json",
+          "description": "Configuration regarding the groups page",
+          "title": "GroupsPageConfig",
+          "type": "object",
+          "properties": {
+            "details": {
+              "$id": "page-groups-details.schema.json",
+              "description": "Configuration regarding the detailed view of a group (\"/groups/[dn]\")",
+              "title": "GroupDetailsConfig",
+              "type": "object",
+              "properties": {
+                "parent": {
+                  "$id": "page-details-parent.schema.json",
+                  "title": "ParentDetailsConfig",
+                  "description": "Configuration regarding the parent entry of the group",
+                  "type": "object",
+                  "properties": {
+                    "asLink": {
+                      "description": "Show parent as link to to the parent entry. @default false",
+                      "type": "boolean",
+                      "default": true
+                    },
+                    "shortParent": {
+                      "description": "If false the parent of the group will be shown as the full distinguishedName, else only the CN is shown. @default false",
+                      "type": "boolean",
+                      "default": true
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "member": {
+                  "$id": "page-details-member.schema.json",
+                  "title": "MemberDetailsConfig",
+                  "description": "Configuration regarding the \"member(s)\" of the entry",
+                  "type": "object",
+                  "properties": {
+                    "asLinks": {
+                      "description": "Show members as links to each member detailed page. @default false",
+                      "type": "boolean",
+                      "default": true
+                    },
+                    "shortMember": {
+                      "description": "If false the each member will be shown as the full distinguishedName, else only the name will be shown. @default false",
+                      "type": "boolean",
+                      "default": true
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "additionalProperties": false
+            },
+            "show": {
+              "description": "Weather or not to show the \"/groups\" page in navigation. Accessing directly to this route will result on a \"403 This page has been disabled by configuration\" error. @default true",
+              "type": "boolean",
+              "default": true
+            },
+            "table": {
+              "$id": "page-groups-table.schema.json",
+              "description": "Groups table view configuration",
+              "title": "GroupsTableConfig",
+              "type": "object",
+              "properties": {
+                "columns": {
+                  "description": "Groups table column settings",
+                  "type": "object",
+                  "properties": {
+                    "description": {
+                      "description": "Configure groups table \"description\" column.",
+                      "properties": {
+                        "hidable": {
+                          "description": "Wether or not allow the \"description\" column to be hidable. @default true",
+                          "type": "boolean",
+                          "default": true
+                        },
+                        "hidden": {
+                          "description": "Wether or not the \"description\" column is hidden by default. @default false",
+                          "type": "boolean",
+                          "default": false
+                        },
+                        "show": {
+                          "description": "Wether or not to show the \"description\" group table column. @default true",
+                          "type": "boolean",
+                          "default": true
+                        }
+                      },
+                      "additionalProperties": false
+                    },
+                    "dn": {
+                      "description": "Configure groups table \"dn\" column.",
+                      "properties": {
+                        "hidable": {
+                          "description": "Wether or not allow the \"dn\" column to be hidable. @default true",
+                          "type": "boolean",
+                          "default": true
+                        },
+                        "hidden": {
+                          "description": "Wether or not the \"dn\" column is hidden by default. @default false",
+                          "type": "boolean",
+                          "default": false
+                        },
+                        "show": {
+                          "description": "Wether or not to show the \"dn\" group table column. @default true",
+                          "type": "boolean",
+                          "default": true
+                        }
+                      },
+                      "additionalProperties": false
+                    },
+                    "groupType": {
+                      "description": "Configure groups table \"groupType\" column.",
+                      "properties": {
+                        "hidable": {
+                          "description": "Wether or not allow the \"groupType\" column to be hidable. @default true",
+                          "type": "boolean",
+                          "default": true
+                        },
+                        "hidden": {
+                          "description": "Wether or not the \"groupType\" column is hidden by default. @default false",
+                          "type": "boolean",
+                          "default": false
+                        },
+                        "show": {
+                          "description": "Wether or not to show the \"groupType\" group table column. @default true",
+                          "type": "boolean",
+                          "default": true
+                        }
+                      },
+                      "additionalProperties": false
+                    },
+                    "mail": {
+                      "description": "Configure groups table \"mail\" column.",
+                      "properties": {
+                        "hidable": {
+                          "description": "Wether or not allow the \"mail\" column to be hidable. @default true",
+                          "type": "boolean",
+                          "default": true
+                        },
+                        "hidden": {
+                          "description": "Wether or not the \"mail\" column is hidden by default. @default false",
+                          "type": "boolean",
+                          "default": false
+                        },
+                        "show": {
+                          "description": "Wether or not to show the \"mail\" group table column. @default true",
+                          "type": "boolean",
+                          "default": true
+                        }
+                      },
+                      "additionalProperties": false
+                    },
+                    "sAMAccountName": {
+                      "description": "Configure groups table \"sAMAccountName\" column.",
+                      "properties": {
+                        "hidable": {
+                          "description": "Wether or not allow the \"sAMAccountName\" column to be hidable. @default false",
+                          "type": "boolean",
+                          "default": false
+                        },
+                        "hidden": {
+                          "description": "Wether or not the \"sAMAccountName\" column is hidden by default. @default false",
+                          "type": "boolean",
+                          "default": false
+                        },
+                        "show": {
+                          "description": "Wether or not to show the \"sAMAccountName\" group table column. @default true",
+                          "type": "boolean",
+                          "default": true
+                        }
+                      },
+                      "additionalProperties": false
+                    },
+                    "whenCreated": {
+                      "description": "Configure groups table \"whenCreated\" column.",
+                      "properties": {
+                        "hidable": {
+                          "description": "Wether or not allow the \"whenCreated\" column to be hidable. @default true",
+                          "type": "boolean",
+                          "default": true
+                        },
+                        "hidden": {
+                          "description": "Wether or not the \"whenCreated\" column is hidden by default. @default false",
+                          "type": "boolean",
+                          "default": true
+                        },
+                        "show": {
+                          "description": "Wether or not to show the \"whenCreated\" group table column. @default true",
+                          "type": "boolean",
+                          "default": true
+                        }
+                      },
+                      "additionalProperties": false
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        },
+        "logsPage": {
+          "$id": "page-logs.schema.json",
+          "description": "configuration regarding the logs page",
+          "title": "LogsPageConfig",
+          "type": "object",
+          "properties": {
+            "show": {
+              "description": "Weather or not to show the /logs page in navigation. Accessing directly to this route will result on a '403 This page has been disabled by configuration' error",
+              "type": "boolean",
+              "default": true
+            }
+          },
+          "additionalProperties": false
+        },
+        "ousPage": {
+          "$id": "page-ous.schema.json",
+          "description": "Configuration regarding the organizational units page",
+          "title": "OrganizationalUnitsPageConfig",
+          "type": "object",
+          "properties": {
+            "details": {
+              "$id": "page-ous-details.schema.json",
+              "description": "Configuration regarding the detailed view of a OU (\"/ous/[dn]\")",
+              "title": "OuDetailsConfig",
+              "type": "object",
+              "properties": {
+                "parent": {
+                  "$id": "page-details-parent.schema.json",
+                  "title": "ParentDetailsConfig",
+                  "description": "Configuration regarding the parent entry of the group",
+                  "type": "object",
+                  "properties": {
+                    "asLink": {
+                      "description": "Show parent as link to to the parent entry. @default false",
+                      "type": "boolean",
+                      "default": true
+                    },
+                    "shortParent": {
+                      "description": "If false the parent of the group will be shown as the full distinguishedName, else only the CN is shown. @default false",
+                      "type": "boolean",
+                      "default": true
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "member": {
+                  "$id": "page-details-member.schema.json",
+                  "title": "MemberDetailsConfig",
+                  "description": "Configuration regarding the \"member(s)\" of the entry",
+                  "type": "object",
+                  "properties": {
+                    "asLinks": {
+                      "description": "Show members as links to each member detailed page. @default false",
+                      "type": "boolean",
+                      "default": true
+                    },
+                    "shortMember": {
+                      "description": "If false the each member will be shown as the full distinguishedName, else only the name will be shown. @default false",
+                      "type": "boolean",
+                      "default": true
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "additionalProperties": false
+            },
+            "show": {
+              "description": "Weather or not to show the \"/ous\" page in navigation. Accessing directly to this route will result on a \"403 This page has been disabled by configuration\" error. @default true",
+              "type": "boolean",
+              "default": true
+            },
+            "table": {
+              "$id": "page-ous-table.schema.json",
+              "description": "Ous table view configuration",
+              "title": "OusTableConfig",
+              "type": "object",
+              "properties": {
+                "columns": {
+                  "description": "Ous table column settings",
+                  "type": "object",
+                  "properties": {
+                    "description": {
+                      "description": "Configure ous table \"description\" column.",
+                      "properties": {
+                        "hidable": {
+                          "description": "Wether or not allow the \"description\" column to be hidable. @default true",
+                          "type": "boolean",
+                          "default": true
+                        },
+                        "hidden": {
+                          "description": "Wether or not the \"description\" column is hidden by default. @default false",
+                          "type": "boolean",
+                          "default": false
+                        },
+                        "show": {
+                          "description": "Wether or not to show the \"description\" ou table column. @default true",
+                          "type": "boolean",
+                          "default": true
+                        }
+                      },
+                      "additionalProperties": false
+                    },
+                    "dn": {
+                      "description": "Configure ous table \"dn\" column.",
+                      "properties": {
+                        "hidable": {
+                          "description": "Wether or not allow the \"dn\" column to be hidable. @default true",
+                          "type": "boolean",
+                          "default": true
+                        },
+                        "hidden": {
+                          "description": "Wether or not the \"dn\" column is hidden by default. @default true",
+                          "type": "boolean",
+                          "default": false
+                        },
+                        "show": {
+                          "description": "Wether or not to show the \"dn\" ou table column. @default true",
+                          "type": "boolean",
+                          "default": true
+                        }
+                      },
+                      "additionalProperties": false
+                    },
+                    "name": {
+                      "description": "Configure ous table \"name\" column.",
+                      "properties": {
+                        "hidden": {
+                          "description": "Wether or not the \"name\" column is hidden by default. @default false",
+                          "type": "boolean",
+                          "default": false
+                        },
+                        "hidable": {
+                          "description": "Wether or not allow the \"name\" column to be hidable. @default false",
+                          "type": "boolean",
+                          "default": false
+                        },
+                        "show": {
+                          "description": "Wether or not to show the \"name\" ou table column. @default true",
+                          "type": "boolean",
+                          "default": true
+                        }
+                      },
+                      "additionalProperties": false
+                    },
+                    "whenCreated": {
+                      "description": "Configure ous table \"whenCreated\" column.",
+                      "properties": {
+                        "hidden": {
+                          "description": "Wether or not the \"whenCreated\" column is hidden by default. @default true",
+                          "type": "boolean",
+                          "default": false
+                        },
+                        "hidable": {
+                          "description": "Wether or not allow the \"whenCreated\" column to be hidable. @default true",
+                          "type": "boolean",
+                          "default": true
+                        },
+                        "show": {
+                          "description": "Wether or not to show the \"whenCreated\" ou table column. @default true",
+                          "type": "boolean",
+                          "default": true
+                        }
+                      },
+                      "additionalProperties": false
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        },
+        "treePage": {
+          "$id": "page-tree.schema.json",
+          "description": "Configuration regarding the tree page",
+          "title": "TreePageConfig",
+          "type": "object",
+          "properties": {
+            "show": {
+              "description": "Wether or not to show the /tree page in navigation. Accessing directly to this route will result on a '403 This page has been disabled by configuration' error. @default true",
+              "type": "boolean",
+              "default": true
+            }
+          },
+          "additionalProperties": false
+        },
+        "usersPage": {
+          "$id": "page-users.schema.json",
+          "description": "Configuration regarding the users page",
+          "title": "UsersPageConfig",
+          "type": "object",
+          "properties": {
+            "details": {
+              "$id": "page-users-details.schema.json",
+              "description": "Configuration regarding the detailed view of a user (\"/users/[dn]\" or \"/users/me\")",
+              "title": "UserDetailsConfig",
+              "type": "object",
+              "properties": {
+                "parent": {
+                  "$id": "page-details-parent.schema.json",
+                  "title": "ParentDetailsConfig",
+                  "description": "Configuration regarding the parent entry of the group",
+                  "type": "object",
+                  "properties": {
+                    "asLink": {
+                      "description": "Show parent as link to to the parent entry. @default false",
+                      "type": "boolean",
+                      "default": true
+                    },
+                    "shortParent": {
+                      "description": "If false the parent of the group will be shown as the full distinguishedName, else only the CN is shown. @default false",
+                      "type": "boolean",
+                      "default": true
+                    }
+                  },
+                  "additionalProperties": false
+                },
+                "memberOf": {
+                  "$id": "page-details-member.schema.json",
+                  "title": "MemberDetailsConfig",
+                  "description": "Configuration regarding the \"member(s)\" of the entry",
+                  "type": "object",
+                  "properties": {
+                    "asLinks": {
+                      "description": "Show members as links to each member detailed page. @default false",
+                      "type": "boolean",
+                      "default": true
+                    },
+                    "shortMember": {
+                      "description": "If false the each member will be shown as the full distinguishedName, else only the name will be shown. @default false",
+                      "type": "boolean",
+                      "default": true
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "additionalProperties": false
+            },
+            "table": {
+              "$id": "page-users-table.schema.json",
+              "description": "Users table view configuration",
+              "title": "UsersTableConfig",
+              "type": "object",
+              "properties": {
+                "columns": {
+                  "description": "Users table columns configuration",
+                  "properties": {
+                    "description": {
+                      "description": "Configure the users table description column",
+                      "properties": {
+                        "hidable": {
+                          "description": "Wether or not the \"description\" is hidable or not. @default true",
+                          "type": "boolean",
+                          "default": true
+                        },
+                        "hidden": {
+                          "description": "Wether or not the \"description\" is hidden by default. @default true",
+                          "type": "boolean",
+                          "default": true
+                        },
+                        "show": {
+                          "description": "Wether or not to show the description column. If false \"hidable\" is ignored. @default true",
+                          "type": "boolean",
+                          "default": true
+                        }
+                      },
+                      "additionalProperties": false
+                    },
+                    "displayName": {
+                      "description": "Configure the users table displayName column",
+                      "properties": {
+                        "hidable": {
+                          "description": "Wether or not the \"displayName\" is hidable or not. @default true",
+                          "type": "boolean",
+                          "default": true
+                        },
+                        "hidden": {
+                          "description": "Wether or not the \"displayName\" is hidden by default. @default false",
+                          "type": "boolean",
+                          "default": false
+                        },
+                        "show": {
+                          "description": "Wether or not to show the displayName column. If false \"hidable\" is ignored. @default true",
+                          "type": "boolean",
+                          "default": true
+                        }
+                      },
+                      "additionalProperties": false
+                    },
+                    "dn": {
+                      "description": "Configure the users table dn column",
+                      "properties": {
+                        "hidable": {
+                          "description": "Wether or not the \"dn\" is hidable or not. @default true",
+                          "type": "boolean",
+                          "default": true
+                        },
+                        "hidden": {
+                          "description": "Wether or not the \"dn\" is hidden by default. @default true",
+                          "type": "boolean",
+                          "default": true
+                        },
+                        "show": {
+                          "description": "Wether or not to show the dn column. If false \"hidable\" is ignored. @default true",
+                          "type": "boolean",
+                          "default": true
+                        }
+                      },
+                      "additionalProperties": false
+                    },
+                    "givenName": {
+                      "description": "Configure the users table givenName column",
+                      "properties": {
+                        "hidable": {
+                          "description": "Wether or not the \"givenName\" is hidable or not. @default true",
+                          "type": "boolean",
+                          "default": true
+                        },
+                        "hidden": {
+                          "description": "Wether or not the \"givenName\" is hidden by default. @default true",
+                          "type": "boolean",
+                          "default": true
+                        },
+                        "show": {
+                          "description": "Wether or not to show the givenName column. If false \"hidable\" is ignored. @default true",
+                          "type": "boolean",
+                          "default": true
+                        }
+                      },
+                      "additionalProperties": false
+                    },
+                    "jpegPhoto": {
+                      "description": "Configure the users table jpegPhoto column",
+                      "properties": {
+                        "hidable": {
+                          "description": "Wether or not the \"jpegPhoto\" is hidable or not. @default true",
+                          "type": "boolean",
+                          "default": true
+                        },
+                        "hidden": {
+                          "description": "Wether or not the \"jpegPhoto\" is hidden by default. @default false",
+                          "type": "boolean",
+                          "default": false
+                        },
+                        "show": {
+                          "description": "Wether or not to show the jpegPhoto column. If false \"hidable\" is ignored. @default true",
+                          "type": "boolean",
+                          "default": true
+                        }
+                      },
+                      "additionalProperties": false
+                    },
+                    "mail": {
+                      "description": "Configure the users table mail column",
+                      "properties": {
+                        "hidable": {
+                          "description": "Wether or not the \"mail\" is hidable or not. @default true",
+                          "type": "boolean",
+                          "default": true
+                        },
+                        "hidden": {
+                          "description": "Wether or not the \"mail\" is hidden by default. @default false",
+                          "type": "boolean",
+                          "default": false
+                        },
+                        "show": {
+                          "description": "Wether or not to show the mail column. If false \"hidable\" is ignored. @default true",
+                          "type": "boolean",
+                          "default": true
+                        }
+                      },
+                      "additionalProperties": false
+                    },
+                    "sAMAccountName": {
+                      "description": "Configure the users table \"sAMAccountName\" column",
+                      "properties": {
+                        "hidable": {
+                          "description": "Wether or not the \"sAMAccountName\" is hidable or not. @default false",
+                          "type": "boolean",
+                          "default": false
+                        },
+                        "hidden": {
+                          "description": "Wether or not the \"sAMAccountName\" is hidden by default. @default false",
+                          "type": "boolean",
+                          "default": false
+                        },
+                        "show": {
+                          "description": "Wether or not to show the \"sAMAccountName\" column. If false \"hidable\" is ignored. @default true",
+                          "type": "boolean",
+                          "default": true
+                        }
+                      },
+                      "additionalProperties": false
+                    },
+                    "sn": {
+                      "description": "Configure the users table sn column",
+                      "properties": {
+                        "hidable": {
+                          "description": "Wether or not the \"sn\" is hidable or not. @default true",
+                          "type": "boolean",
+                          "default": true
+                        },
+                        "hidden": {
+                          "description": "Wether or not the \"sn\" is hidden by default. @default true",
+                          "type": "boolean",
+                          "default": true
+                        },
+                        "show": {
+                          "description": "Wether or not to show the sn column. If false \"hidable\" is ignored. @default true",
+                          "type": "boolean",
+                          "default": true
+                        }
+                      },
+                      "additionalProperties": false
+                    },
+                    "userAccountControl": {
+                      "description": "Configure the users table userAccountControl column",
+                      "properties": {
+                        "hidable": {
+                          "description": "Wether or not the \"userAccountControl\" is hidable or not. @default true",
+                          "type": "boolean",
+                          "default": true
+                        },
+                        "hidden": {
+                          "description": "Wether or not the \"userAccountControl\" is hidden by default. @default false",
+                          "type": "boolean",
+                          "default": false
+                        },
+                        "show": {
+                          "description": "Wether or not to show the userAccountControl column. If false \"hidable\" is ignored. @default true",
+                          "type": "boolean",
+                          "default": true
+                        }
+                      },
+                      "additionalProperties": false
+                    },
+                    "whenCreated": {
+                      "description": "Configure the users table whenCreated column",
+                      "properties": {
+                        "hidable": {
+                          "description": "Wether or not the \"whenCreated\" is hidable or not. @default true",
+                          "type": "boolean",
+                          "default": true
+                        },
+                        "hidden": {
+                          "description": "Wether or not the \"whenCreated\" is hidden by default. @default true",
+                          "type": "boolean",
+                          "default": true
+                        },
+                        "show": {
+                          "description": "Wether or not to show the whenCreated column. If false \"hidable\" is ignored. @default true",
+                          "type": "boolean",
+                          "default": true
+                        }
+                      },
+                      "additionalProperties": false
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "directory": {
+      "$id": "directory.schema.json",
+      "description": "Directory management configuration settings",
+      "title": "DirectoryConfig",
+      "type": "object",
+      "properties": {
+        "ldap": {
+          "$id": "directory-ldap.schema.json",
+          "description": "LDAP client configuration",
+          "title": "LDAPClientConfig",
+          "type": "object",
+          "properties": {
+            "ldapURL": {
+              "default": "ldaps://localhost:636",
+              "description": "LDAP connection string. @default ldaps://localhost:636",
+              "type": "string",
+              "examples": [
+                "ldaps://localhost:636"
+              ]
+            },
+            "strictDN": {
+              "description": "Force strict DN parsing for client methods @default true",
+              "type": "boolean",
+              "default": true
+            },
+            "tlsOptions": {
+              "description": "Additional options passed to TLS connection layer when connecting via ldaps://",
+              "title": "TLSOptions",
+              "type": "object",
+              "properties": {
+                "clientCertEngine": {
+                  "default": "null",
+                  "description": "Name of an OpenSSL engine which can provide the client certificate. @default null",
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "enableTrace": {
+                  "description": "When enabled, TLS packet trace information is written to stderr. This can be used to debug TLS connection problems. @default false",
+                  "type": "boolean",
+                  "default": false
+                },
+                "rejectUnauthorized": {
+                  "description": "If true the server will reject any connection which is not authorized with the list of supplied CAs. This option only has an effect if requestCert is true. @default false",
+                  "type": "boolean",
+                  "default": false
+                },
+                "requestCert": {
+                  "description": "If true the server will request a certificate from clients that connect and attempt to verify that certificate. @default false",
+                  "type": "boolean",
+                  "default": false
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "required": [
+            "ldapURL"
+          ],
+          "additionalProperties": false
+        },
+        "adminGroup": {
+          "type": "string",
+          "default": "Domain Admins",
+          "description": "CN of the directory's administrators group. @default Domain Admins"
+        },
+        "groups": {
+          "description": "Directory settings regarding group management",
+          "type": "object",
+          "properties": {
+            "hide": {
+              "description": "The list of group distinguishedNames, sAMAccountNames, or cn that should not be shown in the /groups view dropdowns and search. Accessing directly to /groups/[dn] of a group that is listed here will result on a '403 This group is hidden by configuration' error. @default []",
+              "type": "array",
+              "default": [],
+              "items": {
+                "type": "string"
+              },
+              "uniqueItems": true
+            },
+            "limit": {
+              "minimum": 0,
+              "description": "The maximum amount of groups allowed in the directory. If set to null the limit will be ignored. Default groups are included in the count. @default null",
+              "type": [
+                "integer",
+                "null"
+              ],
+              "default": null
+            }
+          },
+          "additionalProperties": false
+        },
+        "ous": {
+          "description": "Directory settings regarding ou management",
+          "type": "object",
+          "properties": {
+            "hide": {
+              "description": "The list of ou distinguishedNames, sAMAccountNames, or cn that should not be shown in the /ous view dropdowns and search. Accessing directly to /ous/[dn] of a ou that is listed here will result on a '403 This ou is hidden by configuration' error. @default []",
+              "type": "array",
+              "default": [],
+              "items": {
+                "type": "string"
+              },
+              "uniqueItems": true
+            },
+            "allowNonLeafDelete": {
+              "type": "boolean",
+              "description": "[Dangerous] Allows the deletion of non-leaf Organizational Units. This will recursively delete all entries in the Organizational Unit. @default false",
+              "default": false
+            },
+            "limit": {
+              "minimum": 0,
+              "description": "The maximum amount of ous allowed in the directory. If set to null the limit will be ignored. Default ous are included in the count. @default null",
+              "type": [
+                "integer",
+                "null"
+              ],
+              "default": null
+            }
+          },
+          "additionalProperties": false
+        },
+        "tree": {
+          "description": "Directory settings regarding tree view",
+          "type": "object",
+          "properties": {
+            "hide": {
+              "description": "The list of entry distinguishedNames, sAMAccountNames, or cn that should not be shown in the /tree view panels and search. Accessing directly to /tree/[dn] of an entry that is listed here will result on a '403 This resource is hidden by configuration' error. Hiding containers or ous will also throw the error if trying to access any of the children directly. All hidden entries from users, groups, and ous will also be hidden in the tree view. Hiding the root entry will hide the whole tree, throwing the error always. @default []",
+              "type": "array",
+              "default": [],
+              "items": {
+                "type": "string"
+              },
+              "uniqueItems": true
+            }
+          },
+          "additionalProperties": false
+        },
+        "users": {
+          "description": "Directory settings regarding user management",
+          "type": "object",
+          "properties": {
+            "hide": {
+              "description": "The list of user distinguishedNames, sAMAccountNames, or cn that should not be shown in the /users view dropdowns and search. Accessing directly to /users/[dn] of a user that is listed here will result on a '403 This user is hidden by configuration' error, however, signing in as a listed user will not result in error. @default []",
+              "type": "array",
+              "default": [],
+              "items": {
+                "type": "string"
+              },
+              "uniqueItems": true
+            },
+            "limit": {
+              "minimum": 0,
+              "description": "The maximum amount of users allowed in the directory. If set to null the limit will be ignored. Default users are included in the count. @default null",
+              "type": [
+                "integer",
+                "null"
+              ],
+              "default": null
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "system": {
+      "$id": "system.schema.json",
+      "type": "object",
+      "title": "SystemConfig",
+      "description": "System settings",
+      "properties": {
+        "captcha": {
+          "$id": "captcha.schema.json",
+          "description": "Captcha personalization options. Uses @link https://www.npmjs.com/package/svg-captcha ",
+          "title": "CaptchaConfig",
+          "type": "object",
+          "properties": {
+            "size": {
+              "default": 5,
+              "minimum": 1,
+              "description": "Length of the captcha shown in the authentication page, recommended to use a low value for development. @default 5",
+              "type": "integer"
+            },
+            "height": {
+              "default": 96,
+              "description": "Height of the captcha image. @default 96",
+              "type": "integer"
+            },
+            "width": {
+              "default": 345,
+              "description": "Width of the captcha image. @default 345",
+              "type": "integer"
+            },
+            "fontSize": {
+              "default": 90,
+              "minimum": 0,
+              "description": "Font size of the characters in the captcha. @default 30",
+              "type": "integer"
+            },
+            "charPreset": {
+              "default": "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+              "description": "Characters used to generate the random string in the captcha. @default \"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz\"",
+              "type": "string"
+            },
+            "color": {
+              "type": "boolean",
+              "description": "If false, captcha will be black and white otherwise, it will be randomly colorized @default false",
+              "default": false
+            },
+            "ignoreChars": {
+              "default": "",
+              "type": "string",
+              "description": "Characters that will be ignored in the captcha. @default \"\""
+            },
+            "noise": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "Number of noise lines in the captcha. @default 5",
+              "default": 5
+            },
+            "background": {
+              "default": "white",
+              "description": "CSS color of the captcha background. Can use other css variants other than hex. @default \"#FFFFFF\"",
+              "type": "string",
+              "examples": [
+                "#FFFFFF",
+                "rgb(255,255,255)",
+                "hsl(0, 0%, 100%)",
+                "white"
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        "nonAdmin": {
+          "$id": "system-nonAdmin.schema.json",
+          "additionalProperties": false,
+          "type": "object",
+          "description": "Settings regarding non-admin users",
+          "title": "NonAdminConfig",
+          "properties": {
+            "allowSelfEdit": {
+              "type": "boolean",
+              "description": "Allow non-admin users to edit their own profiles and change their passwords. In the server this is done using the administrator credentials since in a directory only administrators have edit access (administrator@{PUBLIC_LDAP_DOMAIN}, ADMIN_PASSWD, PUBLIC_LDAP_DOMAIN and ADMIN_PASSWD are .env variables). @default false",
+              "default": false
+            },
+            "allowAccessToUsersPage": {
+              "type": "boolean",
+              "default": false,
+              "description": "Allow non-admin users to access the \"/users\" and \"/users/[dn]\" pages. @default false"
+            },
+            "allowAccessToGroupsPage": {
+              "type": "boolean",
+              "default": false,
+              "description": "Allow non-admin users to access the \"/groups\" and \"/groups/[dn]\" pages. @default false"
+            },
+            "allowAccessToOUsPage": {
+              "type": "boolean",
+              "default": false,
+              "description": "Allow non-admin users to access the \"/ous\" and \"/ous/[dn]\" pages. @default false"
+            },
+            "allowAccessToTreePage": {
+              "type": "boolean",
+              "default": false,
+              "description": "Allow non-admin users to access the \"/tree\" page. @default false"
+            },
+            "allowAccessToLogsPage": {
+              "type": "boolean",
+              "default": false,
+              "description": "Allow non-admin users to access the \"/logs\" page. @default false"
+            }
+          }
+        },
+        "logging": {
+          "$id": "logging.schema.json",
+          "description": "Logging configuration according to @link https://www.npmjs.com/package/sveltekit-logger-hook",
+          "title": "LoggingConfig",
+          "type": "object",
+          "properties": {
+            "basePath": {
+              "default": "./logs/",
+              "description": "Logging paths. Where the app and system logs will be stored. @default \"./logs/\"",
+              "format": "path",
+              "type": "string"
+            },
+            "decodeSearchParams": {
+              "$comment": "Converts %20 to whitespace, and so on using decodeUriComponent in the search parameters",
+              "description": "Enable or disable url search params decoding. @default false",
+              "type": "boolean",
+              "default": false
+            },
+            "decodePathname": {
+              "$comment": "Converts %20 to whitespace, and so on using decodeUriComponent in the pathname",
+              "description": "Enable or disable pathname decoding. @default false",
+              "type": "boolean",
+              "default": false
+            },
+            "logDateTemplate": {
+              "default": "\"YYYY-MM-DD HH:mm:ss A\"",
+              "description": "Log date template as indicated by @link https://day.js.org/docs/en/display/format @default \"YYYY-MM-DD HH:mm:ss A\"",
+              "type": "string"
+            },
+            "logTemplate": {
+              "default": "[{date}] {url}{urlSearchParams} {method} {status}",
+              "description": "Log template as indicated by @link https://www.npmjs.com/package/sveltekit-logger-hook @default \"[{date}] {url}{urlSearchParams} {method} {status}\"",
+              "type": "string"
+            },
+            "useLogging": {
+              "description": "Enable or disable logging. If `false` `basePath` is ignored. If `true` `basePath` is required @default false",
+              "type": "boolean",
+              "default": false
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+	"$id": "page-ous-details.schema.json",
+	"description": "Configuration regarding the detailed view of a OU (\"/ous/[dn]\")",
+	"title": "OuDetailsConfig",
+	"type": "object",
+	"properties": {
+		"parent": {
+			"$ref": "page-details-parent.schema.json"
+		},
+		"member": {
+			"$ref": "page-details-member.schema.json"
+		}
+	},
+	"additionalProperties": false
+}

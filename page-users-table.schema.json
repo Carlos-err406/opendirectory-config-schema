@@ -1,0 +1,225 @@
+{
+	"$id": "page-users-table.schema.json",
+	"description": "Users table view configuration",
+	"title": "UsersTableConfig",
+	"type": "object",
+	"properties": {
+		"columns": {
+			"description": "Users table columns configuration",
+			"properties": {
+				"description": {
+					"description": "Configure the users table description column",
+					"properties": {
+						"hidable": {
+							"description": "Wether or not the \"description\" is hidable or not. @default true",
+							"type": "boolean",
+							"default": true
+						},
+						"hidden": {
+							"description": "Wether or not the \"description\" is hidden by default. @default true",
+							"type": "boolean",
+							"default": true
+						},
+						"show": {
+							"description": "Wether or not to show the description column. If false \"hidable\" is ignored. @default true",
+							"type": "boolean",
+							"default": true
+						}
+					},
+					"additionalProperties": false
+				},
+				"displayName": {
+					"description": "Configure the users table displayName column",
+					"properties": {
+						"hidable": {
+							"description": "Wether or not the \"displayName\" is hidable or not. @default true",
+							"type": "boolean",
+							"default": true
+						},
+						"hidden": {
+							"description": "Wether or not the \"displayName\" is hidden by default. @default false",
+							"type": "boolean",
+							"default": false
+						},
+						"show": {
+							"description": "Wether or not to show the displayName column. If false \"hidable\" is ignored. @default true",
+							"type": "boolean",
+							"default": true
+						}
+					},
+					"additionalProperties": false
+				},
+				"dn": {
+					"description": "Configure the users table dn column",
+					"properties": {
+						"hidable": {
+							"description": "Wether or not the \"dn\" is hidable or not. @default true",
+							"type": "boolean",
+							"default": true
+						},
+						"hidden": {
+							"description": "Wether or not the \"dn\" is hidden by default. @default true",
+							"type": "boolean",
+							"default": true
+						},
+						"show": {
+							"description": "Wether or not to show the dn column. If false \"hidable\" is ignored. @default true",
+							"type": "boolean",
+							"default": true
+						}
+					},
+					"additionalProperties": false
+				},
+				"givenName": {
+					"description": "Configure the users table givenName column",
+					"properties": {
+						"hidable": {
+							"description": "Wether or not the \"givenName\" is hidable or not. @default true",
+							"type": "boolean",
+							"default": true
+						},
+						"hidden": {
+							"description": "Wether or not the \"givenName\" is hidden by default. @default true",
+							"type": "boolean",
+							"default": true
+						},
+						"show": {
+							"description": "Wether or not to show the givenName column. If false \"hidable\" is ignored. @default true",
+							"type": "boolean",
+							"default": true
+						}
+					},
+					"additionalProperties": false
+				},
+				"jpegPhoto": {
+					"description": "Configure the users table jpegPhoto column",
+					"properties": {
+						"hidable": {
+							"description": "Wether or not the \"jpegPhoto\" is hidable or not. @default true",
+							"type": "boolean",
+							"default": true
+						},
+						"hidden": {
+							"description": "Wether or not the \"jpegPhoto\" is hidden by default. @default false",
+							"type": "boolean",
+							"default": false
+						},
+						"show": {
+							"description": "Wether or not to show the jpegPhoto column. If false \"hidable\" is ignored. @default true",
+							"type": "boolean",
+							"default": true
+						}
+					},
+					"additionalProperties": false
+				},
+				"mail": {
+					"description": "Configure the users table mail column",
+					"properties": {
+						"hidable": {
+							"description": "Wether or not the \"mail\" is hidable or not. @default true",
+							"type": "boolean",
+							"default": true
+						},
+						"hidden": {
+							"description": "Wether or not the \"mail\" is hidden by default. @default false",
+							"type": "boolean",
+							"default": false
+						},
+						"show": {
+							"description": "Wether or not to show the mail column. If false \"hidable\" is ignored. @default true",
+							"type": "boolean",
+							"default": true
+						}
+					},
+					"additionalProperties": false
+				},
+				"sAMAccountName": {
+					"description": "Configure the users table \"sAMAccountName\" column",
+					"properties": {
+						"hidable": {
+							"description": "Wether or not the \"sAMAccountName\" is hidable or not. @default false",
+							"type": "boolean",
+							"default": false
+						},
+						"hidden": {
+							"description": "Wether or not the \"sAMAccountName\" is hidden by default. @default false",
+							"type": "boolean",
+							"default": false
+						},
+						"show": {
+							"description": "Wether or not to show the \"sAMAccountName\" column. If false \"hidable\" is ignored. @default true",
+							"type": "boolean",
+							"default": true
+						}
+					},
+					"additionalProperties": false
+				},
+				"sn": {
+					"description": "Configure the users table sn column",
+					"properties": {
+						"hidable": {
+							"description": "Wether or not the \"sn\" is hidable or not. @default true",
+							"type": "boolean",
+							"default": true
+						},
+						"hidden": {
+							"description": "Wether or not the \"sn\" is hidden by default. @default true",
+							"type": "boolean",
+							"default": true
+						},
+						"show": {
+							"description": "Wether or not to show the sn column. If false \"hidable\" is ignored. @default true",
+							"type": "boolean",
+							"default": true
+						}
+					},
+					"additionalProperties": false
+				},
+				"userAccountControl": {
+					"description": "Configure the users table userAccountControl column",
+					"properties": {
+						"hidable": {
+							"description": "Wether or not the \"userAccountControl\" is hidable or not. @default true",
+							"type": "boolean",
+							"default": true
+						},
+						"hidden": {
+							"description": "Wether or not the \"userAccountControl\" is hidden by default. @default false",
+							"type": "boolean",
+							"default": false
+						},
+						"show": {
+							"description": "Wether or not to show the userAccountControl column. If false \"hidable\" is ignored. @default true",
+							"type": "boolean",
+							"default": true
+						}
+					},
+					"additionalProperties": false
+				},
+				"whenCreated": {
+					"description": "Configure the users table whenCreated column",
+					"properties": {
+						"hidable": {
+							"description": "Wether or not the \"whenCreated\" is hidable or not. @default true",
+							"type": "boolean",
+							"default": true
+						},
+						"hidden": {
+							"description": "Wether or not the \"whenCreated\" is hidden by default. @default true",
+							"type": "boolean",
+							"default": true
+						},
+						"show": {
+							"description": "Wether or not to show the whenCreated column. If false \"hidable\" is ignored. @default true",
+							"type": "boolean",
+							"default": true
+						}
+					},
+					"additionalProperties": false
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"additionalProperties": false
+}

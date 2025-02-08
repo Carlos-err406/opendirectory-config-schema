@@ -1,0 +1,15 @@
+{
+	"$id": "page-users-details.schema.json",
+	"description": "Configuration regarding the detailed view of a user (\"/users/[dn]\" or \"/users/me\")",
+	"title": "UserDetailsConfig",
+	"type": "object",
+	"properties": {
+		"parent": {
+			"$ref": "page-details-parent.schema.json"
+		},
+		"memberOf": {
+			"$ref": "page-details-member.schema.json"
+		}
+	},
+	"additionalProperties": false
+}

@@ -1,0 +1,24 @@
+{
+	"$id": "app.schema.json",
+	"description": "Application configuration settings",
+	"title": "AppConfig",
+	"type": "object",
+	"properties": {
+		"groupsPage": {
+			"$ref": "page-groups.schema.json"
+		},
+		"logsPage": {
+			"$ref": "page-logs.schema.json"
+		},
+		"ousPage": {
+			"$ref": "page-ous.schema.json"
+		},
+		"treePage": {
+			"$ref": "page-tree.schema.json"
+		},
+		"usersPage": {
+			"$ref": "page-users.schema.json"
+		}
+	},
+	"additionalProperties": false
+}
