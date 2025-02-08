@@ -44,9 +44,11 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 22
+      - name: 'Set up package json'
+        run: 'npm init -y'
 
       - name: Install @apidevtools/json-schema-ref-parser
-        run: npm install -g @apidevtools/json-schema-ref-parser
+        run: npm install @apidevtools/json-schema-ref-parser
 
       - name: Run deference.js
         run: node deference.js ./index.schema.json ./index.json
