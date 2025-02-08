@@ -50,8 +50,8 @@ jobs:
       - name: Install @apidevtools/json-schema-ref-parser
         run: npm install @apidevtools/json-schema-ref-parser
 
-      - name: Run deference.js
-        run: node deference.js ./index.schema.json ./index.json
+      - name: Run dereferenciation script
+        run: node dereference.js ./index.schema.json ./index.json
 
       - name: Install json-schema-for-humans
         run: pip install json-schema-for-humans
@@ -60,7 +60,7 @@ jobs:
         run: generate-schema-doc --config-file docs/config.yaml index.json web/index.html
 
       - name: Copy schemas to make them accessible
-        run: cp -r ./*.schema.json ./web
+        run: cp -r ./*.json ./web
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

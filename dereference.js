@@ -1,5 +1,8 @@
 #!/usr/bin/env node
+
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 //@ts-nocheck
+
 import { $RefParser } from '@apidevtools/json-schema-ref-parser';
 import fs from 'fs';
 import path from 'path';
