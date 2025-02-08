@@ -13,7 +13,7 @@ async function dereference(inputPath, outputPath) {
 		const outputFile = path.resolve(outputPath);
 
 		const parser = new $RefParser();
-		const schema = await parser.dereference(inputFile);
+		const schema = await parser.dereference(inputFile, { mutateInputSchema: false });
 		const data = JSON.stringify(schema, null, 2);
 		if (outputPath) fs.writeFileSync(outputFile, data);
 		else console.log(data);
